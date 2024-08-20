@@ -6,6 +6,88 @@
     <title>MYSCARF - Pesanan</title>
     <style>
         /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, nav, footer {
+            padding: 10px;
+            background-color: #f5f5f5;
+
+        }
+
+        nav {
+            background-color: #faf9f9;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .content-box {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        input, select {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+        background-color: #fffdfd;
+        color: rgb(0, 0, 0);
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-links div {
+        text-align: left;
+    }
+
+    .footer-links h3 {
+        margin-bottom: 10px;
+    }
+
+    .footer-links p {
+        margin: 5px 0;
+    }
     </style>
 </head>
 <body>
@@ -18,68 +100,89 @@
     <nav>
         <a href="index.html">UTAMA</a>
         <a href="collection.html">COLLECTION</a>
-        <a href="pesanan.html">PESANAN</a>
+        <a href="order.html">PESANAN</a>
     </nav>
 
     <div class="container">
         <!-- Pesanan Page -->
         <div id="pesanan" class="content-box">
             <h2>PESANAN MYSCARF</h2>
-            <p><strong>Sila Isikan Maklumat Pelanggan:</strong></p>
-            <p>Nama:</p>
-            <p>No. Telefon:</p>
-            <p>Alamat:</p>
-            <p>Email:</p>
-            <br>
-            <p><strong>Maklumat Produk:</strong></p>
-            <p>Nama Tudung:</p>
-            <p>Jenis Tudung:</p>
-            <p>Warna Tudung:</p>
-            <p>Size/Bidang Tudung:</p>
-            <p>Bilangan:</p>
-            <p>Harga:</p>
-            <br>
-            <p><strong>Maklumat Bayaran:</strong></p>
-            <p>Kaedah Pembayaran: <br>
-                - COD <br>
-                - Online Transfer <br>
-                - Kad Debit/Kad Kredit <br>
-                - E-Wallet</p>
+            <form action="submit_order.html" method="POST">
+                <p><strong>Sila Isikan Maklumat Pelanggan:</strong></p>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="telefon">No. Telefon:</label>
+                <input type="tel" id="telefon" name="telefon" required>
+
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <p><strong>Maklumat Produk:</strong></p>
+                <label for="nama_tudung">Nama Tudung:</label>
+                <input type="text" id="nama_tudung" name="nama_tudung" required>
+
+                <label for="jenis_tudung">Jenis Tudung:</label>
+                <input type="text" id="jenis_tudung" name="jenis_tudung" required>
+
+                <label for="warna_tudung">Warna Tudung:</label>
+                <input type="text" id="warna_tudung" name="warna_tudung" required>
+
+                <label for="size_tudung">Size/Bidang Tudung:</label>
+                <input type="text" id="size_tudung" name="size_tudung" required>
+
+                <label for="bilangan">Bilangan:</label>
+                <input type="number" id="bilangan" name="bilangan" required>
+
+                <label for="harga">Harga:</label>
+                <input type="text" id="harga" name="harga" required>
+
+                <p><strong>Maklumat Bayaran:</strong></p>
+                <label for="pembayaran">Kaedah Pembayaran:</label>
+                <select id="pembayaran" name="pembayaran" required>
+                    <option value="cod">COD</option>
+                    <option value="online_transfer">Online Transfer</option>
+                    <option value="kad_debit">Kad Debit</option>
+                    <option value="kad_kredit">Kad Kredit</option>
+                    <option value="e_wallet">E-Wallet</option>
+                </select>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Order</button>
+            </form>
         </div>
     </div>
 
     <footer>
-        <!-- Footer content here -->
+        <div class="footer-links">
+            <div>
+                <h3>Company</h3>
+                <p>About</p>
+                <p>Careers</p>
+                <p>Our Culture</p>
+                <p>Giving</p>
+                <p>Partners</p>
+                <p>News</p>
+            </div>
+            <div>
+                <h3>Our Pass</h3>
+                <p>Be our members</p>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <p>Finding Help</p>
+                <p>Support Library</p>
+                <p>Community Forums</p>
+                <p>Billing Questions</p>
+                <p>Status</p>
+                <p>Get in Touch</p>
+            </div>
+        </div>
     </footer>
 
 </body>
 </html>
-<footer>
-    <div class="footer-links">
-        <div>
-            <h3>Company</h3>
-            <p>About</p>
-            <p>Careers</p>
-            <p>Our Culture</p>
-            <p>Giving</p>
-            <p>Partners</p>
-            <p>News</p>
-        </div>
-        <div>
-            <h3>Our Pass</h3>
-            <p>Be our members</p>
-        </div>
-        <div>
-            <h3>Support</h3>
-            <p>Finding Help</p>
-            <p>Support Library</p>
-            <p>Community Forums</p>
-            <p>Billing Questions</p>
-            <p>Status</p>
-            <p>Get in Touch</p>
-        </div>
-    </div>
-</footer>
 
-</body>
-</html>
