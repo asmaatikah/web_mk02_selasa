@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYSCARF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .content-box {
+            border: 1px solid green;
+            margin: 20px 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .flex-container .content-box {
+            width: 45%;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-links div {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MYSCARF</h1>
+        <h2>Pusat Beli-Belah Tudung Untuk Kaum Hawa</h2>
+    </header>
+
+    <nav>
+        <a href="#utama">UTAMA</a>
+        <a href="#collection">COLLECTION</a>
+        <a href="#pesanan">PESANAN</a>
+    </nav>
+
+    <div class="container">
+        <!-- Main Page -->
+        <div id="utama" class="content-box">
+            <h2>GAMBAR BEBERAPA MODEL MENGGAYAKAN TUDUNG</h2>
+            <img src="tudung.jpg" alt="Model wearing a scarf">
+        </div>
+
+        <div class="flex-container">
+            <div class="content-box">
+                <h3>GAMBAR PELBAGAI WARNA TUDUNG - PASTEL</h3>
+                <img src="pastel.jpg" alt="Model wearing a scarf">
+            </div>
+            <div class="content-box">
+                <h3>GAMBAR PELBAGAI WARNA TUDUNG - BOLD</h3>
+                <img src="tudung3.jpg" alt="Model wearing a scarf" width="150%" height="100">
+
+            </div>
+        </div>
+
+        <!-- Collection Page -->
+        <div id="collection" class="content-box">
+            <h2>OUR COLLECTION</h2>
+            <div class="flex-container">
+                <div class="content-box">
+                    <h3>SHAWL</h3>
+                </div>
+                <div class="content-box">
+                    <h3>INSTANT SCARF</h3>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="content-box">
+                    <h3>SQUARE SCARF</h3>
+                </div>
+                <div class="content-box">
+                    <h3>VOILE COTTON</h3>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="content-box">
+                    <h3>PLEATED SCARF</h3>
+                </div>
+                <div class="content-box">
+                    <h3>SILK SCARF</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pesanan Page -->
+        <div id="pesanan" class="content-box">
+            <h2>PESANAN MYSCARF</h2>
+            <p><strong>Sila Isikan Maklumat Pelanggan:</strong></p>
+            <p>Nama:</p>
+            <p>No. Telefon:</p>
+            <p>Alamat:</p>
+            <p>Email:</p>
+            <br>
+            <p><strong>Maklumat Produk:</strong></p>
+            <p>Nama Tudung:</p>
+            <p>Jenis Tudung:</p>
+            <p>Warna Tudung:</p>
+            <p>Size/Bidang Tudung:</p>
+            <p>Bilangan:</p>
+            <p>Harga:</p>
+            <br>
+            <p><strong>Maklumat Bayaran:</strong></p>
+            <p>Kaedah Pembayaran: <br>
+                - COD <br>
+                - Online Transfer <br>
+                - Kad Debit/Kad Kredit <br>
+                - E-Wallet</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h3>Company</h3>
+                <p>About</p>
+                <p>Careers</p>
+                <p>Our Culture</p>
+                <p>Giving</p>
+                <p>Partners</p>
+                <p>News</p>
+            </div>
+            <div>
+                <h3>Our Pass</h3>
+                <p>Be our members</p>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <p>Finding Help</p>
+                <p>Support Library</p>
+                <p>Community Forums</p>
+                <p>Billing Questions</p>
+                <p>Status</p>
+                <p>Get in Touch</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
